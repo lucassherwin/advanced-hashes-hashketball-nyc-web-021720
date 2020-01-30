@@ -220,7 +220,7 @@ def most_by_player(stat)
   name = nil
   total = 0
   game_hash.each do |team, data|
-    data[:players] do |player|
+    data[:players].each do |player|
       if player[stat].is_a? String
         if player[stat].length > total
           total = player[stat].length
