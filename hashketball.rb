@@ -215,3 +215,19 @@ def search_players(name, stat)
     end
   end
 end
+
+def most_by_player(stat)
+  name = nil
+  total = 0
+  game_hash.each do |team, data|
+    if player[stat].is_a? String
+      if player[stat].length > total
+        total = player[stat].length
+        name = player[:player_name]
+      end
+    elsif player[stat] > total
+      total = player[stat]
+      name = player[:player_name]
+    end
+  end
+end
