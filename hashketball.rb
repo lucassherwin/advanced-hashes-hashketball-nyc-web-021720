@@ -230,4 +230,5 @@ def most_by_player(stat)
       name = player[:player_name]
     end
   end
+  name
 end
