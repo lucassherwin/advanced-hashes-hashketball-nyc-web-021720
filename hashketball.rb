@@ -221,12 +221,7 @@ def most_by_player(stat)
   total = 0
   game_hash.each do |team, data|
     data[:players].each do |player|
-      if player[stat].is_a? String
-        if player[stat].length > total
-          total = player[stat].length
-          name = player[:player_name]
-        end
-      elsif player[stat] > total
+      if player[stat] > total
         total = player[stat]
         name = player[:player_name]
       end
@@ -261,3 +256,6 @@ def player_with_longest_name
   end
   name
 end
+
+def longest_name_steal_a_ton
+  
