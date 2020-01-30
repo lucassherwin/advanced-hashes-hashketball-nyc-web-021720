@@ -231,8 +231,8 @@ def most_by_player(stat)
         name = player[:player_name]
       end
     end
-    name
   end
+  name
 end
 
 def most_points_scored
