@@ -259,5 +259,5 @@ end
 
 def long_name_steals_a_ton?
   name = player_with_longest_name
-  name == most_by_player(:player_name)
+  name == most_by_player(:steals)
 end
