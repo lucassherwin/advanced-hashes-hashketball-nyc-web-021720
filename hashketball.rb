@@ -257,4 +257,5 @@ def player_with_longest_name
   name
 end
 
-#def longest_name_steal_a_ton
+def longest_name_steal_a_ton
+  player_with_longest_name == most_by_player(player_with_longest_name)
