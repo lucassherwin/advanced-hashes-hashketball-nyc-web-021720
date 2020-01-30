@@ -215,5 +215,3 @@ def search_players(name, stat)
     end
   end
 end
-
-def
