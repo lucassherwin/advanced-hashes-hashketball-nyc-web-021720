@@ -238,3 +238,12 @@ end
 def most_points_scored
   most_by_player(:points)
 end
+
+def winning_team
+  scores = {"Brooklyn Nets" => 0,   "Charlotte Hornets" => 0}
+  game_hash.each do |team, data|
+    data[:players].each do |player|
+      scores[data[:team_name]] += search_players(player[:player_name], :points)
+    end
+  end
+  scores.max_by { |key, value| value}.first
