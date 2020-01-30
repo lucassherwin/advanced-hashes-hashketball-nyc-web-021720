@@ -232,3 +232,7 @@ def most_by_player(stat)
   end
   name
 end
+
+def most_points_scored
+  most_by_player(:points)
+end
