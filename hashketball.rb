@@ -258,4 +258,3 @@ def player_with_longest_name
 end
 
 #def longest_name_steal_a_ton
-  
