@@ -254,8 +254,9 @@ def player_with_longest_name
   name = nil
   game_hash.each do |team, data|
     data[:players].each do |player|
-      if player[stat].is_a? String
-        if player[stat].length > total
-          total = player[stat].length
-          name = player[:player_name]
+      if player[:player_name].length > name.length
+        name = player[:player_name]
+      end
+    end
+  end
 end
